@@ -1,0 +1,84 @@
+{
+  "hotel1": {
+  "name": "Hotel Sea View",
+  "info": "Beachfront hotel with sea view rooms.",
+  "rent": "3000৳ / night",
+  "images": [
+    "img/hotel/seaview/sea1.jpg",
+    "img/hotel/seaview/sea2.jpg",
+    "img/hotel/seaview/sea3.jpg",
+    "img/hotel/seaview/sea4.jpg",
+    "img/hotel/seaview/sea5.jpg",
+    "img/hotel/seaview/sea6.jpg"
+  ]
+},
+
+  "hotel2": {
+    "name": "Hotel Paradise",
+    "info": "Luxury hotel with swimming pool, garden and modern interior.",
+    "rent": "4500৳ / night",
+    "images": [
+      "img/hotel/paradice/paradice3.jpg",
+      "img/hotel/paradice/paradice4.jpg",
+      "img/hotel/paradice/paradice5.jpg",
+      "img/hotel/paradice/paradice6.jpg",
+      "img/hotel/paradice/paradice7.jpg",
+      "img/hotel/paradice/paradice8.jpg",
+      "img/hotel/paradice/paradice9.jpg"
+    ]
+  },
+  "hotel3": {
+    "name": "Hotel Ocean Crown",
+    "info": "Resort located in the hills, offering panoramic views and cozy cottages.",
+    "rent": "3500৳ / night",
+    "images": [
+      "img/hotel/crown/crown1.jpg",
+      "img/hotel/crown/crown2.jpg",
+      "img/hotel/crown/crown3.jpg",
+      "img/hotel/crown/crown4.jpg",
+      "img/hotel/crown/crown5.jpg",
+      "img/hotel/crown/crown6.jpg"
+    ]
+  },
+  "hotel4": {
+    "name": "City Comfort Inn",
+    "info": "Budget-friendly hotel in the city center with clean rooms and free WiFi.",
+    "rent": "2000৳ / night",
+    "images": [
+      "images/hotel4.jpg",
+      "images/hotel4_interior1.jpg",
+      "images/hotel4_interior2.jpg"
+    ]
+  },
+  "hotel5": {
+    "name": "City Comfort Inn",
+    "info": "Budget-friendly hotel in the city center with clean rooms and free WiFi.",
+    "rent": "2000৳ / night",
+    "images": [
+      "images/hotel4.jpg",
+      "images/hotel4_interior1.jpg",
+      "images/hotel4_interior2.jpg"
+    ]
+  },
+  "hotel6": {
+    "name": "jjj",
+    "info": "Budget-friendly hotel in the city center with clean rooms and free WiFi.",
+    "rent": "500৳ / night",
+    "images": [
+      "img/hotel/room.jpg",
+      "images/hotel4_interior1.jpg",
+      "images/hotel4_interior2.jpg"
+    ]
+  },
+  "hotel7": {
+    "name": "SMUCT",
+    "info": "Satay Relax.",
+    "rent": "500৳ / night",
+    "images": [
+      "images/hotel4.jpg",
+      "images/hotel4_interior1.jpg",
+      "images/hotel4_interior2.jpg"
+    ]
+  }
+  
+}
