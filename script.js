@@ -19,7 +19,7 @@ document.getElementById("chatBtn").addEventListener("click", () => {
 
 // Send chat message
 async function sendChat() {
-  const input = document.getElementById("chatInput").value;
+  const input = document.getElementById("userInput").value;
   if (!input) return;
 
   const chatMessages = document.getElementById("chatMessages");
@@ -39,5 +39,10 @@ async function sendChat() {
     console.error("Chat error:", err);
   }
 
-  document.getElementById("chatInput").value = "";
+  document.getElementById("userInput").value = "";
 }
+document.getElementById("userInput").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    sendChat();
+  }
+});

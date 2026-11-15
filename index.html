@@ -16,9 +16,11 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="#places">Places</a></li>
     <li><a href="#hotels">Hotels</a></li>
+    <li><a href="#restaurants">Restaurants</a></li>
     <li><a href="login.html">Login</a></li>
     <li><a href="reg.html">Registration</a></li>
     <li><a href="contact.html">Contact</a></li>
+   
   </ul>
   <div class="nav-logo">
     <img src="img/logo.png" alt="Logo">
@@ -28,12 +30,20 @@
 <button id="chatBtn" class="hero-btn">💬 Chat</button>
 
 <!-- Chat Window -->
-<div id="chatWindow" style="display:none; position:fixed; bottom:20px; right:20px; width:300px; background:#020617; color:white; border-radius:10px; box-shadow:0 0 20px rgba(56,189,248,0.6); padding:15px;">
-  <div id="chatMessages" style="max-height:200px; overflow-y:auto; margin-bottom:10px;"></div>
-  <input type="text" id="chatInput" placeholder="Ask something..." style="width:100%; padding:8px; border-radius:6px; margin-bottom:8px;">
-  <button onclick="sendChat()" style="width:100%; padding:10px; border:none; border-radius:6px; background:#38bdf8; color:#020617; font-weight:bold;">Send</button>
+<div id="chatWindow"
+     style="display:none; position:fixed; bottom:20px; right:20px;
+     width:300px; background:#020617; color:white;
+     border-radius:10px; box-shadow:0 0 20px rgba(56,189,248,0.6);
+     padding:15px; z-index:9999;">
+
+<div id="chatMessages"
+       style="max-height:200px; overflow-y:auto; margin-bottom:10px;">
 </div>
 
+  <input type="text" id="userInput"
+         placeholder="Ask me anything..."
+         style="width:100%; padding:8px; margin-top:10px;">
+</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero-text">
@@ -151,6 +161,43 @@
     <button class="book-btn" onclick="openHotelBooking('SMUCT')">Book Now</button>
     <div class="stars">⭐⭐⭐⭐☆</div>
   </div>
+</div>
+
+<!-- ===== RESTAURANTS ===== -->
+<h2 class="section-title" id="restaurants">POPULAR RESTAURANTS</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="img/restaurants/panshi1.jpg">
+    <h3>Panshi Restaurant</h3>
+    <p>Sylhet</p>
+
+    <a href="restaurant.html?restaurant=res1" class="view-btn">
+      View Details
+    </a>
+  </div>
+
+  <div class="card">
+    <img src="img/restaurants/ocean.jpg">
+    <h3>Ocean 82</h3>
+    <p>Saint Martin's Island</p>
+
+    <a href="restaurant.html?restaurant=res2" class="view-btn">
+      View Details
+    </a>
+  </div>
+
+  <div class="card">
+    <img src="img/restaurants/mermaid.jpg">
+    <h3>Mermaid Cafe</h3>
+    <p>Cox's Bazar</p>
+
+    <a href="restaurant.html?restaurant=res3" class="view-btn">
+      View Details
+    </a>
+  </div>
+
 </div>
 
 <!-- ===== FOOTER ===== -->

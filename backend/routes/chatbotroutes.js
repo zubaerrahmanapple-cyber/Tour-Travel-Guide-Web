@@ -3,12 +3,14 @@ const router = express.Router();
 
 const faq = {
   "hi": "Hello! How can I help you today?",
+  "alvi": "He is our admin.",
+  "zubaer": "He is our admin.",
   "hello": "Hi there! Ask me about places or hotels.",
-  "best time to visit cox's bazar": "November to March is the best time.",
+
   "how to book hotel": "Go to Hotels section and click 'Book Now'.",
   "contact info": "You can reach us at travelbd@gmail.com.",
-  "Alvi"  : "He is our admin.",
   
+
 };
 
 router.post("/chatbot", (req, res) => {

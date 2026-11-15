@@ -1,0 +1,40 @@
+{
+  "res1": {
+    "name": "Panshi Restaurant",
+    "info": "One of the most famous traditional restaurants in Sylhet.",
+    "location": "Sylhet",
+    "rating": "4.8 ⭐",
+    "images": [
+      "img/restaurants/panshi1.jpg",
+      "img/restaurants/panshi2.jpg",
+      "img/restaurants/panshi1.jpg",
+      "img/restaurants/panshi3.jpg"
+    ]
+  },
+
+  "res2": {
+    "name": "Ocean 82",
+    "info": "Popular Bangladeshi and Mughlai cuisine.",
+    "location": "Saint Martin's Island",
+    "rating": "4.7 ⭐",
+    "images": [
+      "img/restaurants/ocean1.jpg",
+      "img/restaurants/ocean2.jpg",
+      "img/restaurants/ocean3.jpg"
+    ]
+  },
+
+  "res3": {
+    "name": "Mermaid Cafe",
+    "info": "Seafood restaurant beside Cox's Bazar beach.",
+    "location": "Cox's Bazar",
+    "rating": "4.6 ⭐",
+    "images": [
+      "img/restaurants/mermaid1.jpg",
+      "img/restaurants/mermaid2.jpg",
+      "img/restaurants/mermaid3.jpg",
+      "img/restaurants/mermaid4.jpg",
+      "img/restaurants/mermaid5.jpg"
+    ]
+  }
+}

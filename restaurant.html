@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <ul class="nav-left">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#places">Places</a></li>
+    <li><a href="index.html#hotels">Hotels</a></li>
+    <li><a href="index.html#restaurants">Restaurants</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="reg.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+  </div>
+</nav>
+
+<!-- RESTAURANT DETAILS -->
+<div id="restaurantDetails" class="details"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const restaurant = params.get("restaurant");
+
+fetch("restaurant.json")
+.then(res => res.json())
+.then(data => {
+
+  const r = data[restaurant];
+
+  if(!r){
+    document.getElementById("restaurantDetails").innerHTML="<h2>Restaurant Not Found!</h2>";
+    return;
+  }
+
+  document.getElementById("restaurantDetails").innerHTML = `
+    <h1>${r.name}</h1>
+
+    <p>${r.info}</p>
+
+    <h3>Location : ${r.location}</h3>
+
+    <h3>Rating : ${r.rating}</h3>
+
+    <div class="grid">
+      ${r.images.map(img => `<img src="${img}" class="detail-img">`).join("")}
+    </div>
+  `;
+
+});
+</script>
+
+</body>
+</html>
