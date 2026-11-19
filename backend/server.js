@@ -21,8 +21,8 @@ app.use("/auth", require("./routes/passwordRoutes"));
 app.use("/places", require("./routes/place"));
 app.use("/hotels", require("./routes/hotel"));
 app.use("/bookings", require("./routes/booking"));
-app.use("/api", require("./routes/contactRoutes"));   // ✅ Contact routes
-app.use("/api", require("./routes/chatbotRoutes"));  // ✅ Chatbot routes
+app.use("/api", require("./routes/contactroutes"));
+app.use("/api", require("./routes/chatbotroutes"));  // ✅ Chatbot routes
 
 // Test route
 app.get("/", (req, res) => {
