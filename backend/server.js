@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use("/auth", require("./routes/auth"));
+app.use("/auth", require("./routes/passwordRoutes"));
 app.use("/places", require("./routes/place"));
 app.use("/hotels", require("./routes/hotel"));
 app.use("/bookings", require("./routes/booking"));
@@ -29,6 +30,8 @@ app.get("/", (req, res) => {
 });
 
 // Server run
-app.listen(5000, () => {
-  console.log("🚀 Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
