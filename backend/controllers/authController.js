@@ -145,3 +145,73 @@ exports.profile = async (req, res) => {
         });
     }
 };
+
+
+// UPDATE USER PROFILE
+exports.updateProfile = async (req, res) => {
+
+    try {
+
+        const { username, email } = req.body;
+
+        if (!username || !email) {
+            return res.status(400).json({
+                message: "Username and email are required"
+            });
+        }
+
+        const cleanUsername = username.trim();
+        const cleanEmail = email.trim().toLowerCase();
+
+        if (!cleanUsername || !cleanEmail) {
+            return res.status(400).json({
+                message: "Username and email cannot be empty"
+            });
+        }
+
+        const existingUser = await User.findOne({
+            email: cleanEmail,
+            _id: { $ne: req.user.id }
+        });
+
+        if (existingUser) {
+            return res.status(400).json({
+                message: "This email is already in use"
+            });
+        }
+
+        const user = await User.findById(req.user.id);
+
+        if (!user) {
+            return res.status(404).json({
+                message: "User not found"
+            });
+        }
+
+        user.username = cleanUsername;
+        user.email = cleanEmail;
+
+        await user.save();
+
+        const updatedUser = await User.findById(req.user.id)
+            .select("-password -resetOTP -resetOTPExpires");
+
+        res.status(200).json({
+            message: "Profile updated successfully",
+            user: updatedUser
+        });
+
+    } catch (err) {
+
+        if (err.code === 11000) {
+            return res.status(400).json({
+                message: "Username or email already exists"
+            });
+        }
+
+        res.status(500).json({
+            message: "Failed to update profile",
+            error: err.message
+        });
+    }
+};
